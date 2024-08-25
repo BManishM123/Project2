@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'calculatorApp';
+
+  stringInput:string="";
+
+  takeInput(num:string){
+    this.stringInput= this.stringInput + num;
+    console.log("String Value:",this.stringInput)
+  }
+
+  evaluateResult(){
+    this.stringInput=eval(this.stringInput);
+    console.log("Result:",this.stringInput);
+  }
 }

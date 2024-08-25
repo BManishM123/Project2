@@ -16,7 +16,12 @@ export class AppComponent {
   }
 
   evaluateResult(){
-    this.stringInput=eval(this.stringInput);
-    console.log("Result:",this.stringInput);
+    if(this.stringInput != ''){
+      this.stringInput=eval(this.stringInput);
+    }
+  }
+
+  resetValue(){
+    this.stringInput="";
   }
 }
